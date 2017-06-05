@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/GMapAndRetrofitDemo.iml" filepath="$PROJECT_DIR$/GMapAndRetrofitDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/googlemaps.iml" filepath="$PROJECT_DIR$/googlemaps.iml" />
     </modules>
   </component>
 </project>
