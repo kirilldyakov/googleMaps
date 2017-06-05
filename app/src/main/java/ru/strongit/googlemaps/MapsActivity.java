@@ -153,13 +153,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     public void selectMarkersByTag(String tag) {
-        for (Marker mrk : markers) {
-            if (mrk.getTag().toString().equals(tag)) {
-                mrk.setIcon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN));
-                mrk.showInfoWindow();
+        for (Marker marker : markers) {
+            if (marker.getTag().toString().equals(tag)) {
+                marker.setIcon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN));
+                marker.showInfoWindow();
+                mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(marker.getPosition(), 9));
             } else {
-                mrk.setIcon(BitmapDescriptorFactory.defaultMarker());
-                mrk.hideInfoWindow();
+                marker.setIcon(BitmapDescriptorFactory.defaultMarker());
+                marker.hideInfoWindow();
             }
         }
     }
@@ -168,4 +169,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onVisitSelected(String id) {
         selectMarkersByTag(id);
     }
+
+
 }
